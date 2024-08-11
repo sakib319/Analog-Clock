@@ -1,0 +1,80 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font: sans-serif;
+ color: white;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 100vh;
+}
+.container{
+  
+}
+.clock{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.25);
+ box-shadow:0 0 30px rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.1);
+  
+   
+   position: relative;
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+/*above this three properties used to throw the before content of clock div to center */  
+}
+
+.clock span{
+  position: absolute;
+  text-align: center;
+  transform: rotate(calc(30deg*var(--i))); 
+  inset:12px;
+}
+
+span b{
+ 
+  transform: rotate(calc(-30deg * var(--i)));
+  display:inline-block;
+  
+}
+
+.clock::before{
+  content:'';
+  position: absolute;
+  width:20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  
+  
+}
+
+.hand{
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
+}
+ .hand i{
+  position: absolute;
+  width:8px;
+  height: var(--ht);
+  background: white;
+  border-radius: 10px;
+  background: var(--clr);
+}
+
